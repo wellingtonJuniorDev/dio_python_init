@@ -1,0 +1,19 @@
+Comandos de instalação:
+
+    python -m pip install --upgrade pip
+    python -m pip install --user twine
+    python -m pip install --user setuptools
+
+Comandos para criar distribuições
+
+    python setup.py sdist bdist_wheel
+
+Comandos de publicacao
+	
+	Test.Pypi
+		python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+	
+		pip install -i https://test.pypi.org/simple/ linq-py==0.0.1
+	
+	Pypi
+		python -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
